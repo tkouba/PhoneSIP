@@ -1,0 +1,29 @@
+HKCR
+{
+	PhoneKeypad.PhoneInput.1 = s 'Phone Keypad'
+	{
+		CLSID = s '{7596E5F5-96D3-47E5-A058-3BD82DB3E88C}'
+	}
+	PhoneKeypad.PhoneInput = s 'Phone Keypad'
+	{
+		CLSID = s '{7596E5F5-96D3-47E5-A058-3BD82DB3E88C}'
+		CurVer = s 'PhoneKeypad.PhoneInput.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7596E5F5-96D3-47E5-A058-3BD82DB3E88C} = s 'Phone Keypad'
+		{
+			val Desc = s 'Phone (numeric only) keypad'
+			ProgID = s 'PhoneKeypad.PhoneInput.1'
+			VersionIndependentProgID = s 'PhoneKeypad.PhoneInput'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{E2053AD6-5E47-4801-BBD5-8BF4A4C3DD82}'
+			DefaultIcon = s '%MODULE%,0'
+			IsSIPInputMethod = s '1'
+		}
+	}
+}

@@ -1,0 +1,38 @@
+// PhoneKeypad.idl : IDL source for PhoneKeypad
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PhoneKeypad.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(D25B8D1B-A168-4BA7-81E9-24033A0AE087),
+	dual,
+	nonextensible,
+	helpstring("IPhoneInput Interface"),
+	pointer_default(unique)
+]
+interface IPhoneInput : IUnknown{
+};
+[
+	uuid(E2053AD6-5E47-4801-BBD5-8BF4A4C3DD82),
+	version(1.0),
+	helpstring("Phone Keypad 1.0 Type Library")
+]
+library PhoneKeypadLib
+{
+
+	importlib("stdole2.tlb");
+
+	[
+		uuid(7596E5F5-96D3-47E5-A058-3BD82DB3E88C),
+		helpstring("PhoneInput Class")
+	]
+	coclass PhoneInput
+	{
+		[default] interface IPhoneInput;
+	};
+};

@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'PhoneKeypad'
+		'PhoneKeypad.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

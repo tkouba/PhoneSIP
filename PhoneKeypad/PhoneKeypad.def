@@ -1,0 +1,9 @@
+; PhoneKeypad.def : Declares the module parameters.
+
+LIBRARY      "PhoneKeypad.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
